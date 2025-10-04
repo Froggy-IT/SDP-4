@@ -1,13 +1,3 @@
-public class Main {
-    public static void main(String[] args) {
-        BobaTea taroMilkTea = new MilkTea(new TaroFlavor());
-        taroMilkTea.serve();
-        BobaTea mangoFruitTea = new FruitTea(new MangoFlavor());
-        mangoFruitTea.serve();
-        BobaTea matchaMilkTea = new MilkTea(new MatchaFlavor());
-        matchaMilkTea.serve();
-    }
-}
 abstract class BobaTea {
     protected Flavor flavor;
     public BobaTea(Flavor flavor) {
@@ -52,5 +42,15 @@ class MatchaFlavor implements Flavor {
     @Override
     public String addFlavor() {
         return "Matcha flavor";
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        BobaTea taroMilkTea = new MilkTea(new TaroFlavor());
+        taroMilkTea.serve();
+        BobaTea mangoFruitTea = new FruitTea(new MangoFlavor());
+        mangoFruitTea.serve();
+        BobaTea matchaMilkTea = new MilkTea(new MatchaFlavor());
+        matchaMilkTea.serve();
     }
 }
